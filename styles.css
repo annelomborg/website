@@ -1,0 +1,596 @@
+body {
+	/* Sættes til 0 hvis siden skal gå ud til kanterne af vinduet. */
+	margin: 20px;
+	background-color: white;
+	font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+	position: relative; /* til kompetencer siden's adobe billeder (position: absolute kræver dette) */
+	background-color: #f5f5f5;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1000px;
+	padding-top: 35px;
+	padding-bottom: 90px;
+}
+
+/* logo gennemgående på alle sider */ 
+#logo {
+	display: block;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	max-width: 90px;
+}
+
+/* menupunkter gennemgående på alle sider */ 
+#links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	text-decoration: none;
+	font-family: 'Lato';
+	font-weight: 100;
+	color: rgb(194, 194, 194);
+	
+
+	max-width: 700px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+}
+
+/* ikke besøgt menu-punkt*/
+a:link {
+	color: rgb(190, 190, 190);
+	text-decoration: none;
+  }
+  
+  /* besøgt menu-punkt */
+  a:visited {
+	color: rgb(173, 173, 173);
+  }
+  
+  /* mouse over menu-punkt */
+  a:hover {
+	color: rgb(32, 32, 32);
+	text-decoration: none;
+  }
+  
+  /* valgt menu-punkt */
+  a:active {
+	color: rgb(190, 190, 190);
+  }
+
+#grid {
+	margin-top: 50px;
+}
+
+/* billedecollage på forside */ 
+#item1 {
+	background: url("img/item1.jpg");
+	background-position: left;
+	background-size: cover;
+}
+
+#item2 {
+	background: url("img/item2.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+#item3 {
+	background: url("img/item3.jpg");
+	background-position: left;
+	background-size: cover;
+}
+
+#item4 {
+	background: url("img/item4.jpg");
+	background-position: bottom;
+	background-size: cover;
+}
+
+@media (max-width: 649px) {
+	#grid {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#item1,
+	#item2,
+	#item3,
+	#item4 {
+		height: 300px;
+	}
+}
+
+@media (min-width: 650px) {
+	#grid {
+		height: 500px;
+		display: grid;
+		grid-template-columns: 40% auto auto;
+		grid-template-rows: auto auto;
+
+		max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#item1 {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 3;
+		margin-top: -20px;
+		margin-bottom: 0px;
+	}
+
+	#item2 {
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 2;
+
+		/* Fjernes hvis at den skal gå til kanten */
+		margin-left: -30px;
+		margin-right: 20px;
+	}
+
+	#item3 {
+		grid-column-start: 3;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 1;
+
+		/* Fjernes hvis at den skal gå til kanten */
+		margin-left: -20px;
+		margin-right: 20px;
+	}
+
+	#item4 {
+		grid-column-start: 2;
+		grid-column-end: 4;
+		grid-row-start: 2;
+		grid-row-end: 3;
+	}
+}
+
+
+h1 {
+	font-weight:100;
+	text-decoration: none; 
+	font-size: 35px;
+	color: rgb(156, 156, 156);
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* alle brødtekster på websitet */ 
+p {
+	font-weight: 100;
+	text-decoration: none;
+	color:rgb(145, 145, 145);
+}
+
+/* footer på alle sider */ 
+footer {
+	box-sizing: border-box;
+	background-color: #ececec;
+	display: flex;
+	flex-direction: column;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1000px;
+	font-size: 10px;
+	padding-top: 30px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 10px;
+}
+
+.footer-tekst {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+}
+
+
+.footer-logo {
+	height: 40px;
+}
+
+
+
+.socialicons {
+	display: flex;
+	flex-direction: row;
+	gap: 3px;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15px;
+	
+}
+
+.socialicons img {
+	width: 36px;
+
+}
+
+.copyright {
+	display: flex;
+	justify-content: end;
+	margin-left: auto;
+
+}
+
+
+/* forside - indhold */
+
+.billedetekst1 {
+	display: flex;
+	text-align: center;
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 80px;
+	max-width: 500px;
+	font-size: 14px;
+}
+
+
+.forsidebilleder {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.billedetekst2 {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-top: -2px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 80px;
+	max-width: 500px;
+	font-size: 12px;
+}
+
+.springeren-billeder {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 650px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.springeren-billeder img {
+	min-width: 325px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.billedetekst3 {
+	font-size: 12px;
+	display: flex;
+	text-align: center;
+	margin-top: -15px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	max-width: 300px;
+}
+
+
+
+
+/* --------- projekter side --------- */
+
+.h1projekter {
+	display: flex;
+	justify-content: start;
+	size: 18px;
+	margin-top: 20px;
+	margin-left: 63px;
+	margin-right: 650px;
+	margin-bottom: 20px;
+}
+
+.tekst1projekter {
+	font-size: 16px;
+	color: rgb(32, 32, 32);
+	justify-content: start;
+	margin-top: 30px;
+	margin-left: 70px;
+	margin-bottom: 70px;
+	max-width: 540px;
+
+}
+.portfolio-billeder {
+	display: flex;
+	height: 400px;
+	justify-content: center;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+}
+
+.portfolio-tekster {
+	font-size: 12px;
+	display: flex;
+	text-align: center;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	max-width: 300px;
+}
+
+.billederflow1 {
+	display: flex;
+	height: 450px;
+	width: auto;
+	justify-content: end;
+	margin-top: 60px;
+	margin-left: 150px;
+	margin-right: 70px;
+}
+
+.billederflow1tekst {
+	font-size: 12px;
+	display: flex;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	max-width: 300px;
+}
+
+.mosteriet {
+	display: flex;
+	height: 550px;
+	width: auto;
+	margin-top: 100px;
+	margin-left: -20px;
+	margin-right: auto;
+}
+
+.billederflow1tekst2 {
+	font-size: 12px;
+	display: flex;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	max-width: 300px;
+}
+
+.folkeblad {
+	display: flex;
+	height: 400px;
+	width: auto;
+	justify-content: center;
+	margin-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.billederflow1tekst3 {
+	font-size: 12px;
+	display: flex;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	max-width: 300px;
+}
+
+.biosam {
+	display: flex;
+	height: 300px;
+	width: auto;
+	justify-content: center;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.billederflow1tekst4 {
+	font-size: 12px;
+	display: flex;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	max-width: 300px;
+}
+
+.folder {
+	display: flex;
+	justify-content: center;
+	max-width: auto;
+	height: 450px;
+	margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.billederflow1tekst5 {
+	font-size: 12px;
+	display: flex;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	max-width: 300px;
+}
+
+
+
+
+
+
+
+/* --------- kompetencer side --------- */
+
+.h1kompetencer {
+	display: flex;
+	size: 18px;
+	margin-top: 20px;
+	margin-left: 0px;
+	margin-right: 620px;
+	margin-bottom: 20px;
+}
+
+.h2kompetencer {
+	display: flex;
+	size: 16px;
+	margin-top: 20px;
+	margin-left: 0px;
+	margin-right: 620px;
+	margin-bottom: 20px;
+
+}
+
+.adobeicons {
+	position: absolute;
+	right: -50px;
+}
+
+.tekst-kompetencer {
+	display: flex;
+	font-weight: 100;
+	text-decoration: none;
+	margin-top: 0px;
+	margin-left: 30px;
+	margin-right: auto; 
+	margin-bottom: 10px;
+	max-width: 800px;
+	color:rgb(145, 145, 145);
+	padding-left: 60px;
+}
+
+.cloud-billede {
+	margin-top: 100px;
+	position: relative;
+	z-index: 0;
+}
+
+.tekst2-kompetencer {
+	text-align: left;
+	max-width: 800px;
+	margin-left: 30px;
+	margin-right: auto;
+	margin-bottom: 15px;
+}
+
+
+/* --------- om side --------- */
+
+.h1om {
+	font-family: 'Lato';
+	font-weight: 100;
+	text-align: center;
+	font-size: 14px;
+	color:rgb(145, 145, 145);
+	margin-left: 45px;
+}
+
+.h2om {
+	font-family: 'Lato';
+	font-weight: 100;
+	text-align: center;
+	font-size: 14px;
+	color:rgb(145, 145, 145);
+	margin-top: 45px;
+	margin-left: 45px;
+}
+
+.om-billeder {
+	display: flex;
+	justify-content: top;
+	height: 250px;
+	width: auto;
+	margin-top: 0px;
+	margin-left: 100px;
+	margin-right: auto;
+}
+
+
+.tekster-om {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 70px;
+	text-align: left;
+	justify-content: center;
+	margin-top: 35px;
+	margin-bottom: 30px;
+
+}
+
+.tekst1om {
+	max-width: 300px;
+
+}
+
+.saebe-billeder {
+	display: flex;
+	justify-content: center;
+	height: 250px;
+	width: auto;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* --------- kontakt side --------- */
+
+.kontakt-content {
+	display: flex;
+	font-size: 100px;
+	text-justify: auto;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.kontakt-overskrift {
+	margin-top: 20px;
+	margin-left: 100px;
+
+}
+.kontaktbillede1 {
+	display: flex;
+	width: auto; 
+	height: 315px;
+	margin-top: 60px;
+	margin-left: 100px;
+}
+
+
+.kontaktformular {
+	font-size: 14px;
+	font-weight: lighter;
+	margin-top: 60px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
